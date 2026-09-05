@@ -1,0 +1,3 @@
+import aboutStats from '../../../data/aboutStats.js'
+function AboutStatsSection(){return <section className="border-y border-slate-200 bg-white py-10" aria-label="Chiffres clés"><div className="mx-auto grid max-w-6xl gap-8 px-4 text-center sm:grid-cols-3 lg:px-8">{aboutStats.map((stat,index)=><article key={stat.label} className={index>0?'sm:border-l sm:border-slate-200':''}><strong className={`block text-4xl font-extrabold ${index===0?'text-blue-700':index===1?'text-emerald-700':'text-slate-950'}`}>{stat.value}</strong><h2 className="mt-2 text-sm font-bold">{stat.label}</h2><p className="mt-1 text-[10px] text-slate-500">{stat.note}{stat.demo?' — valeur illustrative':''}</p></article>)}</div></section>}
+export default AboutStatsSection
