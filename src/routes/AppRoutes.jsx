@@ -56,6 +56,8 @@ function AppRoutes() {
         <Route path={ROUTES.clientPayments} element={<PaymentHistoryPage />} />
         <Route path={ROUTES.clientProfile} element={<ClientProfilePage />} />
         <Route path={ROUTES.clientSettings} element={<ClientSettingsPage />} />
+      </Route>
+      <Route element={<PublicLayout />}>
         <Route path={ROUTES.payment} element={<PaymentPage />} />
         <Route path={ROUTES.paymentStatus} element={<PaymentStatusPage />} />
         <Route path={ROUTES.contactUnlocked} element={<ContactUnlockedPage />} />
