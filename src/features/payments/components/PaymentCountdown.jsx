@@ -18,9 +18,9 @@ function PaymentCountdown({duration = 90, onExpire}) {
 
   const progress = (remaining / duration) * 360
   return (
-    <div className="relative mx-auto grid size-28 place-items-center rounded-full" style={{background: 'conic-gradient(#2563eb ' + progress + 'deg, #dbeafe 0deg)'}}>
-      <div className="grid size-24 place-items-center rounded-full bg-white text-center">
-        <span><strong className="block text-3xl text-slate-950">{remaining}</strong><span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">secondes</span></span>
+    <div className="relative mx-auto grid size-[68px] place-items-center rounded-full" style={{background: 'conic-gradient(#2563eb ' + progress + 'deg, #dbeafe 0deg)'}}>
+      <div className="grid size-[60px] place-items-center rounded-full bg-white text-center">
+        <span><strong className="text-xl leading-none text-blue-700">{remaining}</strong><span className="ml-0.5 text-[9px] font-bold text-blue-700">s</span></span>
       </div>
     </div>
   )
