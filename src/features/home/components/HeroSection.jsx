@@ -104,7 +104,7 @@ function HeroSection() {
           </span>
         </div>
       </div>
-      <div className="px-4 pt-8 lg:px-21">
+      <div className="mx-auto max-w-6xl px-4 pt-8 lg:px-8">
         <form
             onSubmit={submit}
             className="mt-7 rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_12px_30px_rgba(15,23,42,.12)]"
