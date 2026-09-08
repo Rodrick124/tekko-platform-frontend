@@ -1,5 +1,57 @@
-import { BadgeCheck, Grid2X2, Lock, Search, Zap } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { ROUTES } from '../../../constants/routes.js'
-function FinalCtaSection() { return <section className="py-16"><div className="mx-auto max-w-6xl px-4 lg:px-8"><div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#213145] to-[#0b5057] px-5 py-12 text-center text-white shadow-2xl md:px-12"><div className="absolute -left-24 -top-24 size-80 rounded-full bg-blue-600/30 blur-3xl" /><div className="relative mx-auto flex max-w-2xl flex-col items-center"><p className="rounded-full bg-white/10 px-3 py-1.5 text-[10px] text-emerald-200">● Assistance d’urgence à Douala & Yaoundé</p><h2 className="mt-5 text-3xl font-extrabold tracking-tight">Besoin d’un dépannage urgent ou de travaux à domicile ?</h2><p className="mt-3 text-sm leading-6 text-slate-300">Trouvez un artisan de confiance disponible en moins de 30 minutes. Contact WhatsApp certifié pour seulement 100 FCFA.</p><div className="mt-7 flex w-full flex-col justify-center gap-3 sm:flex-row"><a href="#search-input" className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold hover:bg-blue-700"><Search size={18} />Trouver un prestataire maintenant</a><Link to={ROUTES.providers} className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 px-6 py-3 text-sm font-bold hover:bg-white/20"><Grid2X2 size={18} />Consulter les services</Link></div><div className="mt-7 flex flex-wrap justify-center gap-5 text-[10px] text-slate-300"><span className="flex gap-1"><BadgeCheck size={14} className="text-emerald-300" />Prestataires notés</span><span className="flex gap-1"><Lock size={14} className="text-emerald-300" />Paiement sécurisé</span><span className="flex gap-1"><Zap size={14} className="text-emerald-300" />Activation immédiate</span></div></div></div></div></section> }
-export default FinalCtaSection
+import { BadgeCheck, Grid2X2, Lock, Search, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../constants/routes.js";
+function FinalCtaSection() {
+  return (
+    <section className="py-16">
+      <div className="mx-auto max-w-6xl px-4 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#213145] to-[#0b5057] px-5 py-12 text-center text-white shadow-2xl md:px-12">
+          <div className="absolute -left-24 -top-24 size-80 rounded-full bg-blue-600/30 blur-3xl" />
+          <div className="relative mx-auto flex max-w-2xl flex-col items-center">
+            <p className="rounded-full bg-white/10 px-3 py-1.5 text-[10px] text-emerald-200">
+              ● Assistance d’urgence à Douala & Yaoundé
+            </p>
+            <h2 className="mt-5 text-3xl font-extrabold tracking-tight">
+              Besoin d’un dépannage urgent ou de travaux à domicile ?
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-slate-300">
+              Trouvez un artisan de confiance disponible en moins de 30 minutes.
+              Contact WhatsApp certifié pour seulement 100 FCFA.
+            </p>
+            <div className="mt-7 flex w-full flex-col justify-center gap-3 sm:flex-row">
+              <a
+                href="#search-input"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold hover:bg-blue-700"
+              >
+                <Search size={18} />
+                Trouver un prestataire maintenant
+              </a>
+              <Link
+                to={ROUTES.providers}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 px-6 py-3 text-sm font-bold hover:bg-white/20"
+              >
+                <Grid2X2 size={18} />
+                Consulter les services
+              </Link>
+            </div>
+            <div className="mt-7 flex flex-wrap justify-center gap-5 text-[10px] text-slate-300">
+              <span className="flex gap-1">
+                <BadgeCheck size={14} className="text-emerald-300" />
+                Prestataires notés
+              </span>
+              <span className="flex gap-1">
+                <Lock size={14} className="text-emerald-300" />
+                Paiement sécurisé
+              </span>
+              <span className="flex gap-1">
+                <Zap size={14} className="text-emerald-300" />
+                Activation immédiate
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+export default FinalCtaSection;

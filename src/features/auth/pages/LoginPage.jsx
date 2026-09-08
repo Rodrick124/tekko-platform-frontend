@@ -1,3 +1,3 @@
-import PagePlaceholder from '../../../components/common/PagePlaceholder.jsx'
-function LoginPage() { return <PagePlaceholder title="Connexion" /> }
+import AuthPage from '../components/AuthPage.jsx'
+function LoginPage() { return <AuthPage initialMode="login"/> }
 export default LoginPage

@@ -1,0 +1,4 @@
+function PaymentDemoControls({value, onChange, disabled}) {
+  return <div className="rounded-2xl border border-dashed border-blue-300 bg-blue-50 p-4"><label htmlFor="demo-scenario" className="text-xs font-bold uppercase tracking-wider text-blue-800">Scénario de démonstration</label><select id="demo-scenario" value={value} onChange={(event) => onChange(event.target.value)} disabled={disabled} className="mt-2 w-full rounded-xl border border-blue-200 bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-blue-600"><option value="success">Validation réussie</option><option value="refused">Paiement refusé</option><option value="expired">Expiration immédiate</option><option value="error">Erreur technique</option></select><p className="mt-2 text-xs leading-5 text-slate-600">Ce sélecteur remplace la réponse d’un opérateur Mobile Money. Aucun paiement réel.</p></div>
+}
+export default PaymentDemoControls
