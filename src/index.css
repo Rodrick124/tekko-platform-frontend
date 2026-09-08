@@ -9,3 +9,19 @@ a { text-decoration: none; }
 :focus-visible { outline: 3px solid rgba(37, 99, 235, .35); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 @keyframes auth-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.auth-layout-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .auth-layout-card--login {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+
+  .auth-layout-card--register {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+}
