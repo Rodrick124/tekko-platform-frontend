@@ -22,7 +22,9 @@ function AuthPage({initialMode = 'login'}) {
     setNotice(message)
     window.setTimeout(() => setNotice(''), 5000)
   }
-  const form = mode === 'login' ? <LoginForm onModeChange={changeMode} onSuccess={showDemoNotice}/> : <RegisterForm onModeChange={changeMode} onSuccess={showDemoNotice}/>
-  return <section className="px-4 py-10 sm:py-14"><div className="mx-auto max-w-5xl"><AuthModeToggle mode={mode} onChange={changeMode}/><div className="min-h-14 py-3">{notice && <div role="status" aria-live="polite" className="flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-sm font-semibold text-emerald-800"><CheckCircle2 className="mt-0.5 shrink-0" size={18}/><span>{notice}</span></div>}</div><div key={mode} className="animate-[auth-enter_350ms_ease-out] motion-reduce:animate-none"><AuthLayoutCard mode={mode} infoPanel={<AuthInfoPanel mode={mode}/>} formPanel={form}/></div></div></section>
+  const form = mode === 'login'
+    ? <LoginForm onModeChange={changeMode} onSuccess={showDemoNotice}/>
+    : <RegisterForm onModeChange={changeMode} onSuccess={showDemoNotice}/>
+  return <section className="min-w-0 px-4 py-6 sm:py-8 lg:px-4 lg:py-14"><div className="mx-auto w-full max-w-[560px] lg:max-w-5xl"><AuthModeToggle mode={mode} onChange={changeMode}/>{notice && <div role="status" aria-live="polite" className="mt-3 flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-sm font-semibold text-emerald-800"><CheckCircle2 className="mt-0.5 shrink-0" size={18}/><span>{notice}</span></div>}<div key={mode} className="mt-3 animate-[auth-enter_350ms_ease-out] motion-reduce:animate-none"><AuthLayoutCard mode={mode} infoPanel={<AuthInfoPanel mode={mode}/>} formPanel={form}/></div></div></section>
 }
 export default AuthPage
