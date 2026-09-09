@@ -28,9 +28,11 @@ function RegisterForm({onModeChange, onSuccess}) {
     if (Object.keys(next).length) return
     setSubmitting(true)
     try {
-      register({fullName: values.name, email: values.email, phone})
+      register({fullName: values.name, email: values.email, phone, password: values.password})
       setValues((current) => ({...current, password: '', confirmation: ''}))
-      onSuccess('Compte de démonstration créé et connecté. Aucun mot de passe n’a été enregistré.')
+      onSuccess('Compte de démonstration créé et connecté.')
+    } catch (error) {
+      setErrors({email: error.message})
     } finally {
       setSubmitting(false)
     }
