@@ -22,7 +22,7 @@ function LoginForm({onModeChange, onSuccess}) {
     if (Object.keys(next).length) return
     setSubmitting(true)
     try {
-      login({identifier: values.identifier})
+      login({identifier: values.identifier, password: values.password})
       onSuccess('Connexion de démonstration réussie. Aucune donnée n’a été envoyée à un serveur.')
     } catch (error) {
       setErrors({identifier: error.message})
